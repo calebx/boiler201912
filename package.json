@@ -1,0 +1,16 @@
+{
+  "name": "boiler201912",
+  "version": "1.0.0",
+  "description": "nothing but testing",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}

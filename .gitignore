@@ -1,0 +1,10 @@
+.DS_STORE
+
+dist
+node_modules
+
+*.log
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
