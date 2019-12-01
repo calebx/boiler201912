@@ -10,8 +10,7 @@ nothing but testing | 无他，唯试用尔
 
 ## ruler order:
 
-webpack中的rule顺序是按需构建的
-比如scss文件：
+webpack中的rules顺序是按需构建的, 比如scss文件：
 
 ```
 {
@@ -33,12 +32,14 @@ webpack中的rule顺序是按需构建的
     ]
 }
 ```
-这样的顺序目的是 File IO | sass-loader | css-loader | extract-plugin.loader
+
+这样的顺序目的是 File IO | sass-loader | css-loader | extract-plugin.loader  
 可以描述为 extract-plugin.loader(css-loader(sass-loader(file.scss)))
 
 ## babel-preset-env & babel/polyfill
 
 * https://babeljs.io/docs/en/babel-preset-env
 * https://babeljs.io/docs/en/babel-polyfill
-这里配置的preset-env是 ```{ "useBuiltIns": "usage" }```
+
+这里配置的preset-env是 `{ "useBuiltIns": "usage" }`
 所以polyfill会按需自动引用

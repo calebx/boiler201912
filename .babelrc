@@ -1,9 +1,10 @@
 {
-  presets: [
+  "presets": [["@babel/preset-env"]],
+  "plugins": [
     [
-      "@babel/preset-env",
+      "@babel/plugin-transform-runtime",
       {
-        "useBuiltIns": "usage"
+        "corejs": 3
       }
     ]
   ]
