@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const config = {
-    mode: "production",
+    mode: "development",
     entry: {
         app: "./src/index.js"
     },
@@ -13,7 +13,7 @@ const config = {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].[hash].js"
     },
-    devtool: "none",
+    devtool: "inline-source-map",
     devServer: {
         contentBase: "./dist",
         hot: true,
