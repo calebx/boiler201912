@@ -52,6 +52,7 @@ const config = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
+            inject: "head",
             template: "src/index.html"
         }),
         new MiniCssExtractPlugin({
