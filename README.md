@@ -33,13 +33,13 @@ webpack中的rules顺序是按需构建的, 比如scss文件：
 }
 ```
 
-这样的顺序目的是 File IO | sass-loader | css-loader | extract-plugin.loader  
+这样的顺序目的是 File IO | sass-loader | css-loader | extract-plugin.loader
 可以描述为 extract-plugin.loader(css-loader(sass-loader(file.scss)))
 
 ## babel-preset-env & babel/polyfill
 
 * https://babeljs.io/docs/en/babel-preset-env
-* https://babeljs.io/docs/en/babel-polyfill
+* https://babeljs.io/docs/en/babel-plugin-transform-runtime # polyfill已经过时了
 
-这里配置的preset-env是 `{ "useBuiltIns": "usage" }`
-所以polyfill会按需自动引用
+不用preset-env 自带的 `{ "useBuiltIns": "*" }` 选项，
+改用更先进的transform-runtime & babel-runtime & babel-runtime-corejs 来实现polyfill

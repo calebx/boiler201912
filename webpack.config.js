@@ -3,9 +3,11 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const nodeEnv = process.env.NODE_ENV;
+const isProd = nodeEnv === "production";
 
 const config = {
-    mode: "development",
+    mode: nodeEnv ? nodeEnv : "development",
     entry: {
         app: "./src/index.js"
     },
@@ -13,7 +15,7 @@ const config = {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].[hash].js"
     },
-    devtool: "inline-source-map",
+    devtool: isProd ? "none" : "inline-source-map",
     devServer: {
         contentBase: "./dist",
         hot: true,
@@ -34,13 +36,13 @@ const config = {
                     {
                         loader: "css-loader",
                         options: {
-                            sourceMap: true
+                            sourceMap: !isProd
                         }
                     },
                     {
                         loader: "sass-loader",
                         options: {
-                            sourceMap: true
+                            sourceMap: !isProd
                         }
                     }
                 ]
