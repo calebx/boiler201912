@@ -3,39 +3,3 @@
 html {
   line-height: 1.25;
 }
-
-.map {
-  width: 100%;
-  height: 100vh;
-}
-
-.info-window-content {
-  padding: 6px;
-
-  .name {
-    margin: 0 0 3px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .addr {
-    margin-bottom: 6px;
-    font-weight: 200;
-    font-size: 12px;
-    font-style: normal;
-    line-height: 1.5;
-  }
-
-  .direct-link {
-    display: block;
-    color: #111;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 2;
-    text-align: center;
-    text-decoration: none;
-    border: 1px solid #111;
-    border-radius: 2px;
-  }
-}
