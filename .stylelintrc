@@ -1,0 +1,14 @@
+{
+    "extends": ["stylelint-config-standard", "stylelint-config-rational-order"],
+    "rules": {
+        "indentation": 2,
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": ["function", "if", "each", "include", "extend", "mixin"]
+            }
+        ],
+        "no-empty-source": null,
+        "font-family-no-missing-generic-family-keyword": null
+    }
+}
