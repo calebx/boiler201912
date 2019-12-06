@@ -4,11 +4,11 @@
   "env": {
     "browser": true
   },
-  "plugins": [
-    "react"
-  ],
+  "plugins": ["react"],
   "rules": {
     "no-console": "off",
+    "indent": ["error", 4],
+    "comma-dangle": ["error", "never"],
     "quotes": ["error", "double", { "avoidEscape": true }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }

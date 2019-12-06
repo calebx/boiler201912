@@ -3,11 +3,12 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
 const nodeEnv = process.env.NODE_ENV;
 const isProd = nodeEnv === "production";
 
 const config = {
-    mode: nodeEnv ? nodeEnv : "development",
+    mode: nodeEnv || "development",
     entry: {
         app: "./src/index.js"
     },
