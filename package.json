@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.7.4",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "calf-css": "git+https://github.com/calebx/calf-css.git#master",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.2.1",
     "eslint": "^6.1.0",
